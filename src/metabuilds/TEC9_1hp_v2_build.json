@@ -1,0 +1,47 @@
+  [
+  {
+    "id": "TEC9 1HP V2 Build",
+    "name": "TEC9 1HP V2 Build",
+
+    "weapons": {
+      "main": {
+        "name": "TEC9",
+        "image": "/Meta Builds/Guns/TEC9.webp"
+      },
+      "secondary": [
+        { "name": "AWS338 Bullseye", "image": "/Meta Builds/Guns/AWS338-Bullseye.webp" }
+      ],
+      "melee": {
+        "name": "Kukri",
+        "image": "/Meta Builds/Guns/Kukri.webp"
+      }
+    },
+
+    "armor": [
+      { "slot": "Helmet", "name": "Shelterer Hat", "image": "/Meta Builds/Armours/Shelterer-Hat.webp" },
+      { "slot": "Mask", "name": "Shelterer Mask", "image": "/Meta Builds/Armours/Shelterer-Mask.webp" },
+      { "slot": "Top", "name": "Savior Jacket", "image": "/Meta Builds/Armours/Savior-Jacket.webp" },
+      { "slot": "Pants", "name": "Savior Pants", "image": "/Meta Builds/Armours/Savior-Pants.webp" },
+      { "slot": "Gloves", "name": "Savior Gloves", "image": "/Meta Builds/Armours/Savior-Gloves.webp" },
+      { "slot": "Boots", "name": "Cowboy Boots", "image": "/Meta Builds/Armours/Cowboy-Boots.webp" }
+    ],
+
+    "mods": [
+      { "name": "Durable Territory", "image": "/Meta Builds/Mods/Fortress-Warfare.webp", "slot": "TEC9" },
+      { "name": "Weapon Symphony", "image": "/Meta Builds/Mods/Lunar.webp", "slot": "Helmet" },
+      { "name": "Targeted Strike", "image": "/Meta Builds/Mods/Violent.webp", "slot": "Mask" },
+      { "name": "Rejuvanating", "image": "/Meta Builds/Mods/Lunar.webp", "slot": "Top" },
+      { "name": "Deadshot", "image": "/Meta Builds/Mods/Downstar.webp", "slot": "Pants" },
+      { "name": "Crit Amplifer", "image": "/Meta Builds/Mods/Crescent.webp", "slot": "Gloves" },
+      { "name": "Rush Hour", "image": "/Meta Builds/Mods/Downstar.webp", "slot": "Boots" }
+    ],
+
+    "calibration": [
+      { "name": "SMG Heavy Style", "image": "/Meta Builds/Calibration/SMG.webp", "description": "Heavy Style with Crit rate" }
+    ],
+
+    "videos": [
+      { "url": "https://youtu.be/YtBC8j7GN14?si=mzhrI1tMGP-cz68P" }
+    ]
+  }
+  ]

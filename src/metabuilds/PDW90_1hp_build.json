@@ -1,0 +1,47 @@
+  [
+  {
+    "id": "PDW90 1HP Build",
+    "name": "PDW90 1HP Build",
+
+    "weapons": {
+      "main": {
+        "name": "PDW90",
+        "image": "/Meta Builds/Guns/PDW90.webp"
+      },
+      "secondary": [
+        { "name": "S870", "image": "/Meta Builds/Guns/S870.webp" }
+      ],
+      "melee": {
+        "name": "Kukri",
+        "image": "/Meta Builds/Guns/Kukri.webp"
+      }
+    },
+
+    "armor": [
+      { "slot": "Helmet", "name": "Savior Hat", "image": "/Meta Builds/Armours/Savior-Hat.webp" },
+      { "slot": "Mask", "name": "Lonewolf Mask", "image": "/Meta Builds/Armours/Lonewolf-Mask.webp" },
+      { "slot": "Top", "name": "Lonewolf Jacket", "image": "/Meta Builds/Armours/Lonewolf-Jacket.webp" },
+      { "slot": "Pants", "name": "Savior Pants", "image": "/Meta Builds/Armours/Savior-Pants.webp" },
+      { "slot": "Gloves", "name": "Savior Gloves", "image": "/Meta Builds/Armours/Savior-Gloves.webp" },
+      { "slot": "Boots", "name": "Bloodstained Tracker Boots", "image": "/Meta Builds/Armours/Bloodstained-Tracker-Boots.webp" }
+    ],
+
+    "mods": [
+      { "name": "Vulnerability Amplifier", "image": "/Meta Builds/Mods/Bullseye.webp", "slot": "PDW90" },
+      { "name": "Fateful Strike", "image": "/Meta Builds/Mods/Violent.webp", "slot": "Helmet" },
+      { "name": "Targeted Strike", "image": "/Meta Builds/Mods/Bullseye.webp", "slot": "Mask" },
+      { "name": "Rejuvenating", "image": "/Meta Builds/Mods/Lunar.webp", "slot": "Top" },
+      { "name": "Deadshot", "image": "/Meta Builds/Mods/Downstar.webp", "slot": "Pants" },
+      { "name": "Crit Amplifier", "image": "/Meta Builds/Mods/Crescent.webp", "slot": "Gloves" },
+      { "name": "Rush Hour", "image": "/Meta Builds/Mods/Downstar.webp", "slot": "Boots" }
+    ],
+
+    "calibration": [
+      { "name": "SMG Heavy Style", "image": "/Meta Builds/Calibration/SMG.webp", "description": "Heavy Style with Crit rate" }
+    ],
+
+    "videos": [
+      { "url": "https://www.youtube.com/watch?v=xYz9DaajkBo&t" }
+    ]
+  }
+  ]
