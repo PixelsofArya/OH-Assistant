@@ -1,0 +1,47 @@
+  [
+  {
+    "id": "EBR14 1hp v1 build",
+    "name": "EBR14 1hp v1 build",
+
+    "weapons": {
+      "main": {
+        "name": "EBR14 Octopus Grilled Rings",
+        "image": "/Meta Builds/Guns/EBR14-OctopusGrilledRings.webp"
+      },
+      "secondary": [
+        { "name": "AWS338 Bullseye", "image": "/Meta Builds/Guns/AWS338-Bullseye.webp" }
+      ],
+      "melee": {
+        "name": "Kukri",
+        "image": "/Meta Builds/Guns/Kukri.webp"
+      }
+    },
+
+    "armor": [
+      { "slot": "Helmet", "name": "Shelterer Hat", "image": "/Meta Builds/Armours/Shelterer-Hat.webp" },
+      { "slot": "Mask", "name": "Shelterer Mask", "image": "/Meta Builds/Armours/Shelterer-Mask.webp" },
+      { "slot": "Top", "name": "Savior Jacket", "image": "/Meta Builds/Armours/Savior-Jacket.webp" },
+      { "slot": "Pants", "name": "Savior Pants", "image": "/Meta Builds/Armours/Savior-Pants.webp" },
+      { "slot": "Gloves", "name": "BBQ Gloves", "image": "/Meta Builds/Armours/BBQ-Gloves.webp" },
+      { "slot": "Boots", "name": "Savior Shoes", "image": "/Meta Builds/Armours/Savior-Shoes.webp" }
+    ],
+
+    "mods": [
+      { "name": "Flame Resonance", "image": "/Meta Builds/Mods/Burn.webp", "slot": "EBR14 Octopus Grilled Rings" },
+      { "name": "Deviation Expert", "image": "/Meta Builds/Mods/Cresent-Deviant-Energy.webp", "slot": "Helmet" },
+      { "name": "Blaze Amplifier", "image": "/Meta Builds/Mods/Burn.webp", "slot": "Mask" },
+      { "name": "Rejuvenating", "image": "/Meta Builds/Mods/Lunar-Deviant-Energy.webp", "slot": "Top" },
+      { "name": "Elemental Resonance", "image": "/Meta Builds/Mods/Downstar-Deviant-Energy.webp", "slot": "Pants" },
+      { "name": "Elemental Overload", "image": "/Meta Builds/Mods/Cresent-Deviant-Energy.webp", "slot": "Gloves" },
+      { "name": "Rush Hour", "image": "/Meta Builds/Mods/Downstar-Deviant-Energy.webp", "slot": "Boots" }
+    ],
+
+    "calibration": [
+      { "name": "Rapid Shot Style", "image": "/Meta Builds/Calibration/Sniper.webp", "description": "Rapid Shot Style with Elemental Damage" }
+    ],
+
+    "videos": [
+      { "url": "https://youtu.be/ub5skLKkZsE?si=eEPhfm4nbLuJQ0r4" }
+    ]
+  }
+  ]

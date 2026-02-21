@@ -2,6 +2,8 @@ import { useEffect, useState } from "react";
 import pdw90_1hp from "../metabuilds/PDW90_1hp_build.json";
 import tec9_1hp_v1 from "../metabuilds/TEC9_1hp_v1_build.json";
 import tec9_1hp_v2 from "../metabuilds/TEC9_1hp_v2_build.json";
+import ebr14_octopus_1hp_v1 from "../metabuilds/EBR14-OctopusGrilledRings_1hp_v1_build.json";
+import ebr14_octopus_1hp_v2 from "../metabuilds/EBR14-OctopusGrilledRings_1hp_v2_build.json";
 
 export default function MetaBuilds() {
   const [selectedBuild, setSelectedBuild] = useState(null);
@@ -10,7 +12,7 @@ export default function MetaBuilds() {
 
   useEffect(() => {
     setBuilds([
-      ...pdw90_1hp,...tec9_1hp_v1,...tec9_1hp_v2,
+      ...pdw90_1hp,...tec9_1hp_v1,...tec9_1hp_v2,...ebr14_octopus_1hp_v1,...ebr14_octopus_1hp_v2,
     ]);
   }, []);
 
@@ -75,7 +77,7 @@ export default function MetaBuilds() {
           >
             {/* Header */}
             <div className="flex items-center justify-center relative px-8 py-6 border-b border-white/10">
-              <h2 className="text-3xl font-bold text-center">
+              <h2 className="text-xl font-bold text-center">
                 {selectedBuild.name}
               </h2>
 
