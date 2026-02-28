@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, lazy, Suspense } from "react";
 import {
   BrowserRouter as Router,
   Routes,
@@ -9,11 +9,12 @@ import {
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 
-import Home from "./pages/Home";
-import Tools from "./pages/Tools";
-import MetaBuilds from "./pages/MetaBuilds";
-import ResourceTracker from "./pages/ResourceTracker";
-import AboutOHAssistant from "./pages/AboutOHAssistant";
+/* ✅ LAZY PAGE IMPORTS */
+const Home = lazy(() => import("./pages/Home"));
+const Tools = lazy(() => import("./pages/Tools"));
+const MetaBuilds = lazy(() => import("./pages/MetaBuilds"));
+const ResourceTracker = lazy(() => import("./pages/ResourceTracker"));
+const AboutOHAssistant = lazy(() => import("./pages/AboutOHAssistant"));
 
 function AppContent() {
   const location = useLocation();
@@ -24,7 +25,7 @@ function AppContent() {
 
     const timer = setTimeout(() => {
       setLoading(false);
-    }, 600); // adjust speed here
+    }, 600);
 
     return () => clearTimeout(timer);
   }, [location]);
@@ -40,19 +41,28 @@ function AppContent() {
         <Navbar />
 
         <main className="flex-1">
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/tools" element={<Tools />} />
-            <Route path="/meta-builds" element={<MetaBuilds />} />
-            <Route path="/resource-tracker" element={<ResourceTracker />} />
-            <Route path="/AboutOHAssistant" element={<AboutOHAssistant />} />
-          </Routes>
+          {/* ✅ Suspense handles lazy loading */}
+          <Suspense
+            fallback={
+              <div className="flex items-center justify-center h-full text-white">
+                Loading page...
+              </div>
+            }
+          >
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/tools" element={<Tools />} />
+              <Route path="/meta-builds" element={<MetaBuilds />} />
+              <Route path="/resource-tracker" element={<ResourceTracker />} />
+              <Route path="/AboutOHAssistant" element={<AboutOHAssistant />} />
+            </Routes>
+          </Suspense>
         </main>
 
         <Footer />
       </div>
 
-      {/* LOADER OVERLAY */}
+      {/* YOUR EXISTING OVERLAY LOADER */}
       {loading && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 backdrop-blur-md">
           <div className="text-white text-lg tracking-wider animate-pulse">
@@ -75,6 +85,7 @@ function App() {
           loop
           muted
           playsInline
+          preload="none"   /* ✅ prevents heavy initial load */
         >
           <source src="/hero.mp4" type="video/mp4" />
         </video>

@@ -2,6 +2,7 @@ import { useState, useRef, useEffect } from "react";
 import ColorTextTool from "../tools/ColorTextTool";
 import StartraceoretoStardustsource from "../tools/StartraceoretoStardustsource";
 import SulferchemistCalculator from "../tools/SulferchemistCalculator";
+import Artofstardustdecay from "../tools/Artofstardustdecay";
 
 export default function Tools() {
   const [activeTool, setActiveTool] = useState("color");
@@ -71,6 +72,17 @@ export default function Tools() {
           </button>
 
           <button
+            onClick={() => setActiveTool("stardust decay")}
+            className={`px-4 py-2 rounded-lg whitespace-nowrap ${
+              activeTool === "stardust decay"
+                ? "bg-white/20 text-white"
+                : "bg-white/5 text-white/70 hover:bg-white/10 cursor-pointer"
+            }`}
+          >
+            Art of Stardust Decay
+          </button>
+
+          <button
             disabled
             className="px-4 py-2 rounded-xl bg-white/5 text-white/40 text-sm cursor-not-allowed whitespace-nowrap"
           >
@@ -85,6 +97,7 @@ export default function Tools() {
           {activeTool === "color" && <ColorTextTool />}
           {activeTool === "startrace" && <StartraceoretoStardustsource />}
           {activeTool === "sulfer" && <SulferchemistCalculator />}
+          {activeTool === "stardust decay" && <Artofstardustdecay/>}
         </div>
       </div>
 
