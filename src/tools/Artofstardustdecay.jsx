@@ -106,10 +106,10 @@ export default function Artofstardustdecay() {
           {!error && result && (
             <>
               {result.stardustProduced !== undefined && (
-                <p>• Stardust Source Produced: {result.stardustProduced}</p>
+                <p>• Stardust Source Required: {result.stardustProduced}</p>
               )}
               {result.acidNeeded !== undefined && (
-                <p>• Acid Required: {result.acidNeeded}</p>
+                <p>• Acid Produced: {result.acidNeeded}</p>
               )}
             </>
           )}
