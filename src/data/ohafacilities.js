@@ -31,6 +31,7 @@ export const facilities = [
     name: "Advanced Stove",
     image: "/OHA Facilities/Advanced-Stove.webp",
     Materials: [
+      { name: "Power Cost", amount: 5, image: "/OHA Mats/Watt.webp" },
       { name: "Steel Ingot", amount: 25, image: "/OHA Mats/Steel-Ingot.webp" },
       { name: "Aluminum Ingot", amount: 10, image: "/OHA Mats/Aluminum-Ingot.webp" },
       { name: "Special Part", amount: 10, image: "/OHA Mats/Special-Part.webp" },
@@ -55,6 +56,7 @@ export const facilities = [
     name: "Small Biomass Generator",
     image: "/OHA Facilities/Biomass-Generator.webp",
     Materials: [
+      { name: "Power Generate", amount: 25, image: "/OHA Mats/Watt.webp" },
       { name: "Aluminum Ingot", amount: 25, image: "/OHA Mats/Aluminum-Ingot.webp" },
       { name: "Copper Ingot", amount: 10, image: "/OHA Mats/Copper-Ingot.webp" },
       { name: "Special Part", amount: 5, image: "/OHA Mats/Special-Part.webp" },
@@ -68,6 +70,7 @@ export const facilities = [
     name: "Large Biomass Generator",
     image: "/OHA Facilities/Biomass-Generator.webp",
     Materials: [
+      { name: "Power Generate", amount: 30, image: "/OHA Mats/Watt.webp" },
       { name: "Tungsten Ingot", amount: 20, image: "/OHA Mats/Tungsten-Ingot.webp" },
       { name: "Copper Ingot", amount: 16, image: "/OHA Mats/Copper-Ingot.webp" },
       { name: "Automatic Part", amount: 15, image: "/OHA Mats/Automatic-Part.webp" },
@@ -81,6 +84,7 @@ export const facilities = [
     name: "Compact Water Filter",
     image: "/OHA Facilities/Compact-Water-Filter.webp",
     Materials: [
+      { name: "Power Cost", amount: 6, image: "/OHA Mats/Watt.webp" },
       { name: "Wood", amount: 50, image: "/OHA Mats/Wood.webp" },
       { name: "Adhesive", amount: 15, image: "/OHA Mats/Adhesive.webp" },
       { name: "Charcoal", amount: 20, image: "/OHA Mats/Charcoal.webp" },
@@ -92,6 +96,7 @@ export const facilities = [
     name: "Large Water Filter",
     image: "/OHA Facilities/Large-Water-Filter.webp",
     Materials: [
+      { name: "Power Cost", amount: 10, image: "/OHA Mats/Watt.webp" },
       { name: "Electronic Part", amount: 15, image: "/OHA Mats/Electronic-Part.webp" },
       { name: "Automatic Part", amount: 20, image: "/OHA Mats/Automatic-Part.webp" },
       { name: "Adhesive", amount: 20, image: "/OHA Mats/Adhesive.webp" },
@@ -128,6 +133,7 @@ export const facilities = [
     name: "Deviation Energy Generator",
     image: "/OHA Facilities/Deviation-Energy-Generator.webp",
     Materials: [
+      { name: "Power Generate", amount: 35, image: "/OHA Mats/Watt.webp" },
       { name: "Tungsten Ingot", amount: 100, image: "/OHA Mats/Tungsten-Ingot.webp" },
       { name: "Electronic Part", amount: 40, image: "/OHA Mats/Electronic-Part.webp" },
       { name: "Automatic Part", amount: 40, image: "/OHA Mats/Automatic-Part.webp" },
@@ -160,6 +166,7 @@ export const facilities = [
     name: "Electric Furnace",
     image: "/OHA Facilities/Electric-Furnace.webp",
     Materials: [
+      { name: "Power Cost", amount: 5, image: "/OHA Mats/Watt.webp" },
       { name: "Steel Ingot", amount: 35, image: "/OHA Mats/Steel-Ingot.webp" },
       { name: "Copper Ingot", amount: 15, image: "/OHA Mats/Copper-Ingot.webp" },
       { name: "Electronic Part", amount: 5, image: "/OHA Mats/Electronic-Part.webp" },
@@ -171,6 +178,7 @@ export const facilities = [
     name: "Fridge",
     image: "/OHA Facilities/Fridge.webp",
     Materials: [
+      { name: "Power Cost", amount: 2, image: "/OHA Mats/Watt.webp" },
       { name: "Steel Ingot", amount: 15, image: "/OHA Mats/Steel-Ingot.webp" },
       { name: "Copper Ingot", amount: 10, image: "/OHA Mats/Copper-Ingot.webp" },
       { name: "Standard Part", amount: 10, image: "/OHA Mats/Standard-Part.webp" },
@@ -260,6 +268,7 @@ export const facilities = [
     name: "Irrigation Facility",
     image: "/OHA Facilities/Irrigation-Facility.webp",
     Materials: [
+      { name: "Power Cost", amount: 2, image: "/OHA Mats/Watt.webp" },
       { name: "Aluminum Ingot", amount: 10, image: "/OHA Mats/Aluminum-Ingot.webp" },
       { name: "Special Part", amount: 5, image: "/OHA Mats/Special-Part.webp" },
       { name: "Electronic Part", amount: 5, image: "/OHA Mats/Electronic-Part.webp" },
@@ -282,6 +291,7 @@ export const facilities = [
     name: "Large Hydropower Generator",
     image: "/OHA Facilities/Large-Hydropower-Generator.webp",
     Materials: [
+      { name: "Power Generate", amount: 30, image: "/OHA Mats/Watt.webp" },
       { name: "Tungsten Ingot", amount: 40, image: "/OHA Mats/Tungsten-Ingot.webp" },
       { name: "Electronic Part", amount: 30, image: "/OHA Mats/Electronic-Part.webp" },
       { name: "Automatic Part", amount: 30, image: "/OHA Mats/Automatic-Part.webp" },
@@ -295,6 +305,7 @@ export const facilities = [
     name: "Large Refinary Facility",
     image: "/OHA Facilities/Large-Refinary-Facility.webp",
     Materials: [
+      { name: "Power Cost", amount: 15, image: "/OHA Mats/Watt.webp" },
       { name: "Bronze Ingot", amount: 25, image: "/OHA Mats/Bronze-Ingot.webp" },
       { name: "Copper Ingot", amount: 10, image: "/OHA Mats/Copper-Ingot.webp" },
       { name: "Electronic Part", amount: 5, image: "/OHA Mats/Electronic-Part.webp" },
@@ -306,6 +317,7 @@ export const facilities = [
     name: "Small Refinary Facility",
     image: "/OHA Facilities/Small-Refinary-Facility.webp",
     Materials: [
+      { name: "Power Cost", amount: 10, image: "/OHA Mats/Watt.webp" },
       { name: "Bronze Ingot", amount: 25, image: "/OHA Mats/Bronze-Ingot.webp" },
       { name: "Copper Ingot", amount: 10, image: "/OHA Mats/Copper-Ingot.webp" },
       { name: "Electronic Part", amount: 5, image: "/OHA Mats/Electronic-Part.webp" },
@@ -317,6 +329,7 @@ export const facilities = [
     name: "Large Solar Generator",
     image: "/OHA Facilities/Large-Solar-Generator.webp",
     Materials: [
+      { name: "Power Generate", amount: 20, image: "/OHA Mats/Watt.webp" },
       { name: "Tungsten Ingot", amount: 20, image: "/OHA Mats/Tungsten-Ingot.webp" },
       { name: "Copper Ingot", amount: 16, image: "/OHA Mats/Copper-Ingot.webp" },
       { name: "Glass", amount: 10, image: "/OHA Mats/Glass.webp" },
@@ -331,6 +344,7 @@ export const facilities = [
     name: "Small Solar Generator",
     image: "/OHA Facilities/Small-Solar-Generator.webp",
     Materials: [
+      { name: "Power Generate", amount: 15, image: "/OHA Mats/Watt.webp" },
       { name: "Steel Ingot", amount: 15, image: "/OHA Mats/Steel-Ingot.webp" },
       { name: "Copper Ingot", amount: 8, image: "/OHA Mats/Copper-Ingot.webp" },
       { name: "Glass", amount: 5, image: "/OHA Mats/Glass.webp" },
@@ -365,6 +379,7 @@ export const facilities = [
     name: "Large Synthesis Bench",
     image: "/OHA Facilities/Large-Synthesis-Bench.webp",
     Materials: [
+      { name: "Power Cost", amount: 10, image: "/OHA Mats/Watt.webp" },
       { name: "Tungsten Ingot", amount: 15, image: "/OHA Mats/Tungsten-Ingot.webp" },
       { name: "Steel Ingot", amount: 20, image: "/OHA Mats/Steel-Ingot.webp" },
       { name: "Automatic Part", amount: 30, image: "/OHA Mats/Automatic-Part.webp" },
@@ -379,6 +394,7 @@ export const facilities = [
     name: "Small Synthesis Bench",
     image: "/OHA Facilities/Small-Synthesis-Bench.webp",
     Materials: [
+      { name: "Power Cost", amount: 6, image: "/OHA Mats/Watt.webp" },
       { name: "Steel Ingot", amount: 20, image: "/OHA Mats/Steel-Ingot.webp" },
       { name: "Bronze Ingot", amount: 20, image: "/OHA Mats/Bronze-Ingot.webp" },
       { name: "Refined Part", amount: 20, image: "/OHA Mats/Refined-Part.webp" },
@@ -412,6 +428,7 @@ export const facilities = [
     name: "Logging Platform",
     image: "/OHA Facilities/Logging-Platform.webp",
     Materials: [
+      { name: "Power Cost", amount: 12, image: "/OHA Mats/Watt.webp" },
       { name: "Aluminum Ingot", amount: 20, image: "/OHA Mats/Aluminum-Ingot.webp" },
       { name: "Electronic Part", amount: 20, image: "/OHA Mats/Electronic-Part.webp" },
       { name: "Rubber", amount: 20, image: "/OHA Mats/Rubber.webp" },
@@ -423,6 +440,7 @@ export const facilities = [
     name: "Mining Platform",
     image: "/OHA Facilities/Mining-Platform.webp",
     Materials: [
+      { name: "Power Cost", amount: 15, image: "/OHA Mats/Watt.webp" },
       { name: "Tungsten Ingot", amount: 25, image: "/OHA Mats/Tungsten-Ingot.webp" },
       { name: "Electronic Part", amount: 30, image: "/OHA Mats/Electronic-Part.webp" },
       { name: "Metal Scraps", amount: 15, image: "/OHA Mats/Metal-Scraps.webp" },
@@ -436,6 +454,7 @@ export const facilities = [
     name: "Stardust Mining Platform",
     image: "/OHA Facilities/Mining-Platform.webp",
     Materials: [
+      { name: "Power Cost", amount: 15, image: "/OHA Mats/Watt.webp" },
       { name: "Tungsten Ingot", amount: 25, image: "/OHA Mats/Tungsten-Ingot.webp" },
       { name: "Electronic Part", amount: 30, image: "/OHA Mats/Electronic-Part.webp" },
       { name: "Metal Scraps", amount: 15, image: "/OHA Mats/Metal-Scraps.webp" },
@@ -574,6 +593,7 @@ export const facilities = [
     name: "Small Hydropower Generator",
     image: "/OHA Facilities/Small-Hydropower-Generator.webp",
     Materials: [
+      { name: "Power Generate", amount: 25, image: "/OHA Mats/Watt.webp" },
       { name: "Aluminum Ingot", amount: 100, image: "/OHA Mats/Aluminum-Ingot.webp" },
       { name: "Electronic Part", amount: 15, image: "/OHA Mats/Electronic-Part.webp" },
       { name: "Special Part", amount: 15, image: "/OHA Mats/Automatic-Part.webp" },
@@ -587,6 +607,7 @@ export const facilities = [
     name: "Water Pump",
     image: "/OHA Facilities/Water-Pump.webp",
     Materials: [
+      { name: "Power Cost", amount: 10, image: "/OHA Mats/Watt.webp" },
       { name: "Steel Ingot", amount: 25, image: "/OHA Mats/Steel-Ingot.webp" },
       { name: "Carbon Fiber Fabric", amount: 20, image: "/OHA Mats/Carbon-Fiber-Fabric.webp" },
       { name: "Refined Part", amount: 20, image: "/OHA Mats/Refined-Part.webp" },
@@ -599,6 +620,7 @@ export const facilities = [
     name: "Small Water Pump",
     image: "/OHA Facilities/Small-Waterpump.webp",
     Materials: [
+      { name: "Power Cost", amount: 1, image: "/OHA Mats/Watt.webp" },
       { name: "Refined Part", amount: 10, image: "/OHA Mats/Refined-Part.webp" },
       { name: "Steel Ingot", amount: 30, image: "/OHA Mats/Steel-Ingot.webp" },
       { name: "Electronic Part", amount: 2, image: "/OHA Mats/Electronic-Part.webp" },
@@ -619,6 +641,7 @@ export const facilities = [
     name: "Brewing Barrel",
     image: "/OHA Facilities/Brewing-Barrel.webp",
     Materials: [
+      { name: "Power Cost", amount: 10, image: "/OHA Mats/Watt.webp" },
       { name: "Wood", amount: 50, image: "/OHA Mats/Wood.webp" },
       { name: "Adhesive", amount: 20, image: "/OHA Mats/Adhesive.webp" },
       { name: "Rubber", amount: 20, image: "/OHA Mats/Rubber.webp" },

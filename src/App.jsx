@@ -15,6 +15,7 @@ const Tools = lazy(() => import("./pages/Tools"));
 const MetaBuilds = lazy(() => import("./pages/MetaBuilds"));
 const ResourceTracker = lazy(() => import("./pages/ResourceTracker"));
 const AboutOHAssistant = lazy(() => import("./pages/AboutOHAssistant"));
+const RefillPlanner = lazy(() => import("./pages/RefillPlanner"));
 
 function AppContent() {
   const location = useLocation();
@@ -55,6 +56,7 @@ function AppContent() {
               <Route path="/meta-builds" element={<MetaBuilds />} />
               <Route path="/resource-tracker" element={<ResourceTracker />} />
               <Route path="/AboutOHAssistant" element={<AboutOHAssistant />} />
+              <Route path="/refill-planner" element={<RefillPlanner />} />
             </Routes>
           </Suspense>
         </main>

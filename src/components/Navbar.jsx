@@ -11,6 +11,7 @@ const navItems = [
 const moreItems = [
   { name: "Meta Builds", path: "/meta-builds" },
   { name: "Resource Tracker", path: "/resource-tracker" },
+  { name: "Refill Planner", path: "/refill-planner" },
   // add more later here
 ];
 

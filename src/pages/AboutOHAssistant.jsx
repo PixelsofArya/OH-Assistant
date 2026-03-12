@@ -61,7 +61,7 @@ export default function AboutOHAssistant() {
               Aryadeep Barai
             </h2>
             <p className="text-white/60 mt-1">
-              IGN: <span className="text-white font-medium">CallMeArt</span>
+              IGN: <span className="text-white font-medium">CallMeArtTTV</span>
             </p>
 
             <p className="mt-4 max-w-xl text-white/70 leading-relaxed">
