@@ -11,7 +11,7 @@ import installStep5 from './assets/Untitled-1_0001_Layer 7.jpg';
 import installStep6 from './assets/Untitled-1_0000_Layer 8.jpg';
 
 function App() {
-  const downloadLink = "https://github.com/PixelsofArya/OH-Assistant-App/releases/download/v1.0.0/OH.Assistant.Setup.1.0.0.exe";
+  const downloadLink = "https://github.com/PixelsofArya/OH-Assistant-App/releases/download/v1.0.0/OH-Assistant-Setup-1.0.0.exe";
 
   return (
     <div className="app-wrapper">
@@ -43,7 +43,7 @@ function App() {
           </p>
           
           <div className="download-actions">
-            <a href={downloadLink} className="download-btn" download="OHAssistant.exe">
+            <a href={downloadLink} className="download-btn" download="OH-Assistant-Setup-1.0.0.exe">
               Download for Windows
             </a>
             <p className="version-info">Version 1.0.0 • Clean Installation</p>
