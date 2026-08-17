@@ -1,26 +1,17 @@
-import { useState, useEffect, useRef } from "react";
-import { NavLink, useNavigate } from "react-router-dom";
+import React, { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import logo from "../assets/logo.png";
 
 const navItems = [
   { name: "Home", path: "/" },
-  { name: "Tools", path: "/tools" },
-];
-
-const moreItems = [
-  { name: "Meta Builds", path: "/meta-builds" },
-  { name: "Resource Tracker", path: "/resource-tracker" },
-  { name: "Refill Planner", path: "/refill-planner" },
-  // add more later here
+  { name: "About", path: "/AboutOHAssistant" },
 ];
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
   const [visible, setVisible] = useState(false);
-  const [moreOpen, setMoreOpen] = useState(false);
   const navigate = useNavigate();
-  const moreRef = useRef(null);
 
   useEffect(() => {
     if (open) {
@@ -33,20 +24,11 @@ export default function Navbar() {
     }
   }, [open]);
 
-  useEffect(() => {
-  const handleClickOutside = (event) => {
-    if (moreRef.current && !moreRef.current.contains(event.target)) {
-      setMoreOpen(false);
-    }
-  };
-
-  document.addEventListener("mousedown", handleClickOutside);
-  return () => document.removeEventListener("mousedown", handleClickOutside);
-}, []);
-
   const navigateAndReload = (path) => {
     navigate(path);
     window.scrollTo(0, 0);
+    // Note: You generally don't want to force a full page reload in a React app, 
+    // but I kept your logic intact to preserve any specific behavior you intended.
     setTimeout(() => window.location.reload(), 50);
   };
 
@@ -59,7 +41,7 @@ export default function Navbar() {
 
             {/* Left — Logo */}
             <button
-              onClick={() => navigateAndReload("/AboutOHAssistant")}
+              onClick={() => navigateAndReload("/")}
               className="flex items-center gap-3 group focus:outline-none cursor-pointer"
             >
               <img
@@ -68,13 +50,12 @@ export default function Navbar() {
                 className="w-9 h-9 rounded-full transition-transform duration-300 group-hover:scale-105"
               />
               <span className="text-lg font-semibold tracking-wide transition-colors duration-300 ">
-                Once Human Assistant
+                OH Assistant
               </span>
             </button>
 
             {/* DESKTOP LINKS */}
             <div className="hidden lg:flex items-center gap-2">
-
               {navItems.map((item) => (
                 <button
                   key={item.name}
@@ -84,34 +65,6 @@ export default function Navbar() {
                   {item.name}
                 </button>
               ))}
-
-              {/* MORE DROPDOWN */}
-              <div ref={moreRef} className="relative">
-                <button
-                  onClick={() => setMoreOpen(!moreOpen)}
-                  className="px-4 py-2 rounded-lg text-sm font-medium text-white/70 hover:bg-white/10 hover:text-white transition cursor-pointer"
-                >
-                  More ▾
-                </button>
-
-                {moreOpen && (
-                  <div className="absolute right-0 mt-2 w-48 rounded-xl bg-white/5 backdrop-blur-xl border border-white/10 shadow-xl p-2 space-y-1">
-                    {moreItems.map((item) => (
-                      <button
-                        key={item.name}
-                        onClick={() => {
-                          navigateAndReload(item.path);
-                          setMoreOpen(false);
-                        }}
-                        className="block w-full text-left px-4 py-2 rounded-lg text-sm text-white/70 hover:bg-white/10 hover:text-white transition"
-                      >
-                        {item.name}
-                      </button>
-                    ))}
-                  </div>
-                )}
-              </div>
-
             </div>
 
             {/* MOBILE TOGGLE */}
@@ -155,26 +108,6 @@ export default function Navbar() {
                 {item.name}
               </button>
             ))}
-
-            {/* MOBILE MORE SECTION */}
-            <div className="border-t border-white/10 my-2 pt-2">
-              <p className="px-4 py-2 text-xs text-white/40 uppercase">
-                More
-              </p>
-
-              {moreItems.map((item) => (
-                <button
-                  key={item.name}
-                  onClick={() => {
-                    navigateAndReload(item.path);
-                    setOpen(false);
-                  }}
-                  className="block w-full px-4 py-3 rounded-lg text-sm text-left font-medium text-white/70 hover:bg-white/10 hover:text-white transition cursor-pointer"
-                >
-                  {item.name}
-                </button>
-              ))}
-            </div>
           </div>
         </>
       )}

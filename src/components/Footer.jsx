@@ -1,11 +1,8 @@
+import React from "react";
 import { useNavigate } from "react-router-dom";
 
 export default function Footer() {
   const navigate = useNavigate();
-
-  const goToBeginner = () => {
-    navigate("/", { state: { scrollTo: "beginner" } });
-  };
 
   return (
     <footer className="mt-24 px-4 pb-10">
@@ -20,8 +17,8 @@ export default function Footer() {
               OH Assistant
             </h3>
             <p className="text-white/70 text-sm leading-relaxed">
-              Your friendly hub for guides, tools, and curated content
-              to help you survive and thrive in Once Human.
+              Your ultimate desktop companion app to help you survive and thrive in Once Human. 
+              Lightweight, fast, and stays out of your way.
             </p>
           </div>
 
@@ -29,22 +26,26 @@ export default function Footer() {
           <div>
             <h4 className="text-white font-semibold mb-3">Quick Links</h4>
             <ul className="space-y-2 text-white/70 text-sm">
-
               <li>
                 <button
-                  onClick={goToBeginner}
+                  onClick={() => {
+                    navigate("/");
+                    window.scrollTo(0, 0);
+                  }}
                   className="hover:text-white transition cursor-pointer"
                 >
-                  Beginner Guides
+                  Home / Download
                 </button>
               </li>
-
               <li>
                 <button
-                  onClick={() => navigate("/tools")}
+                  onClick={() => {
+                    navigate("/AboutOHAssistant");
+                    window.scrollTo(0, 0);
+                  }}
                   className="hover:text-white transition cursor-pointer"
                 >
-                  Tools
+                  About the Project
                 </button>
               </li>
             </ul>
@@ -52,7 +53,7 @@ export default function Footer() {
 
           {/* SOCIAL */}
           <div>
-            <h4 className="text-white font-semibold mb-3">Community</h4>
+            <h4 className="text-white font-semibold mb-3">Community & Dev</h4>
             <ul className="space-y-2 text-white/70 text-sm">
               <li>
                 <a
@@ -99,15 +100,11 @@ export default function Footer() {
         {/* BOTTOM */}
         <div className="text-center text-white/60 text-xs space-y-2">
           <p>
-            All videos and content belong to their respective creators.
-            OH Assistant is a fan-made project and is not affiliated with
-            Once Human or its developers.
+            OH Assistant is a fan-made desktop utility and is not affiliated with, endorsed, 
+            or sponsored by Starry Studio or Once Human.
           </p>
-          {/* <p>
-            © {new Date().getFullYear()} OH Assistant. All rights reserved.
-          </p> */}
           <p>
-            If you want to remove your content from OH Assistant, please contact me at{" "}
+            Need app support or found a bug? Contact me at{" "}
             <a
               href="mailto:aryabarai.ohassistant@gmail.com"
               className="underline hover:text-white"
@@ -115,7 +112,6 @@ export default function Footer() {
               aryabarai.ohassistant@gmail.com
             </a>
           </p>
-
         </div>
       </div>
     </footer>
