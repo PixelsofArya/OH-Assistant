@@ -46,7 +46,7 @@ function App() {
             <a href={downloadLink} className="download-btn" download="OH-Assistant-Setup-1.0.0.exe">
               Download for Windows
             </a>
-            <p className="version-info">Version 1.0.0 • Clean Installation</p>
+            <p className="version-info">Version 1.0.4 • Clean Installation</p>
           </div>
         </section>
 
