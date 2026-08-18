@@ -96,7 +96,7 @@ function App() {
               </div>
               <div className="card-content">
                 <h3>4. Choose Location</h3>
-                <p>Confirm the destination folder where the app will be installed, then click <strong>Install</strong>.</p>
+                <p>Confirm the destination folder where the app will be installed <strong>(make sure it's a clean new folder or when you update or uninstall the app it will clear everything in that folder)</strong>, then click <strong>Install</strong>.</p>
               </div>
             </div>
 
