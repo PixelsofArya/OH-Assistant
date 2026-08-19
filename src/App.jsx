@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import './index.css';
 import logo from './assets/logo.png';
 
@@ -12,6 +12,20 @@ import installStep6 from './assets/Untitled-1_0000_Layer 8.jpg';
 
 function App() {
   const downloadLink = "https://github.com/PixelsofArya/OH-Assistant-App/releases/download/v1.0.4/OH-Assistant-Setup-1.0.4.exe";
+  const [releases, setReleases] = useState([]);
+
+  // Fetch ALL releases without filtering them out
+  useEffect(() => {
+    fetch('https://api.github.com/repos/PixelsofArya/OH-Assistant-App/releases')
+      .then(response => response.json())
+      .then(data => {
+        if (Array.isArray(data)) {
+          // Simply set all releases directly to state
+          setReleases(data);
+        }
+      })
+      .catch(error => console.error("Error fetching releases:", error));
+  }, []);
 
   return (
     <div className="app-wrapper">
@@ -50,136 +64,143 @@ function App() {
           </div>
         </section>
 
-        {/* LARGE GRID INSTALLATION PROCESS */}
+        {/* HOW TO INSTALL */}
         <section className="install-section">
           <h2 className="section-title">How to Install</h2>
-          
           <div className="install-grid">
-            
-            {/* Step 1: Cyan Border */}
             <div className="install-card solid-panel border-cyan">
-              <div className="image-wrapper">
-                <img src={installStep1} alt="Windows Defender Warning" />
-              </div>
+              <div className="image-wrapper"><img src={installStep1} alt="Windows Defender Warning" /></div>
               <div className="card-content">
                 <h3>1. Bypassing SmartScreen</h3>
                 <p>Because OH Assistant is a new independent app, Windows might show a warning. Click <strong>"More info"</strong>.</p>
               </div>
             </div>
-
-            {/* Step 2: Red Border */}
             <div className="install-card solid-panel border-red">
-              <div className="image-wrapper">
-                <img src={installStep2} alt="Run Anyway Button" />
-              </div>
+              <div className="image-wrapper"><img src={installStep2} alt="Run Anyway Button" /></div>
               <div className="card-content">
                 <h3>2. Run Anyway</h3>
                 <p>Click the <strong>"Run anyway"</strong> button at the bottom to safely launch the installer.</p>
               </div>
             </div>
-
-            {/* Step 3: Cyan Border */}
             <div className="install-card solid-panel border-cyan">
-              <div className="image-wrapper">
-                <img src={installStep3} alt="Choose Install Options" />
-              </div>
+              <div className="image-wrapper"><img src={installStep3} alt="Choose Install Options" /></div>
               <div className="card-content">
                 <h3>3. Install Options</h3>
                 <p>Select whether you want to install the app for all users on your PC, or just yourself, and click Next.</p>
               </div>
             </div>
-
-            {/* Step 4: Red Border */}
             <div className="install-card solid-panel border-red">
-              <div className="image-wrapper">
-                <img src={installStep4} alt="Choose Location" />
-              </div>
+              <div className="image-wrapper"><img src={installStep4} alt="Choose Location" /></div>
               <div className="card-content">
                 <h3>4. Choose Location</h3>
-                <p>Confirm the destination folder where the app will be installed <strong>(make sure it's a clean new folder or when you update or uninstall the app it will clear everything in that folder)</strong>, then click <strong>Install</strong>.</p>
+                <p>Confirm the destination folder where the app will be installed <strong>(make sure it's a clean new folder)</strong>, then click <strong>Install</strong>.</p>
               </div>
             </div>
-
-            {/* Step 5: Cyan Border */}
             <div className="install-card solid-panel border-cyan">
-              <div className="image-wrapper">
-                <img src={installStep5} alt="Installing Progress" />
-              </div>
+              <div className="image-wrapper"><img src={installStep5} alt="Installing Progress" /></div>
               <div className="card-content">
                 <h3>5. Installing</h3>
                 <p>Wait just a few seconds while the custom setup wizard configures everything on your system.</p>
               </div>
             </div>
-
-            {/* Step 6: Red Border */}
             <div className="install-card solid-panel border-red">
-              <div className="image-wrapper">
-                <img src={installStep6} alt="Installation Complete" />
-              </div>
+              <div className="image-wrapper"><img src={installStep6} alt="Installation Complete" /></div>
               <div className="card-content">
                 <h3>6. Finish & Play</h3>
                 <p>Ensure the "Run OH Assistant" box is checked, click <strong>Finish</strong>, and run the app!</p>
               </div>
             </div>
+          </div>
+        </section>
 
+        {/* YOUTUBE THUMBNAIL SHOWCASE */}
+        <section className="thumbnail-showcase">
+          <h2 className="section-title">See It In Action</h2>
+          <a 
+            href="https://youtu.be/JKsKFc74YWY?si=kcTyz32mutp8lk40" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className="video-thumbnail-link solid-panel"
+          >
+            <img 
+              src="https://i.ytimg.com/vi/JKsKFc74YWY/hq720.jpg?sqp=-oaymwEnCNAFEJQDSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLCOJX4KUD0EskvIWB4Tap6ZUHEoYQ" 
+              alt="OH Assistant Video Showcase" 
+              className="youtube-thumbnail" 
+            />
+            <div className="play-overlay">
+              <div className="play-button">▶</div>
+            </div>
+          </a>
+        </section>
+
+        {/* ALL GITHUB RELEASES (SCROLLABLE & MINIMAL) */}
+        <section className="changelog-section">
+          <h2 className="section-title">All Updates</h2>
+          <div className="releases-compact-grid">
+            {releases.length > 0 ? releases.map((release) => (
+              <div key={release.id} className="release-compact-card solid-panel">
+                <div className="release-header-compact">
+                  <div>
+                    <h3>{release.name || release.tag_name}</h3>
+                    <span className="release-date">
+                      {new Date(release.published_at).toLocaleDateString(undefined, {
+                        year: 'numeric', month: 'short', day: 'numeric'
+                      })}
+                    </span>
+                  </div>
+                  <a href={release.html_url} target="_blank" rel="noopener noreferrer" className="release-link-icon" title="View on GitHub">
+                    ↗
+                  </a>
+                </div>
+                
+                {/* Conditionally render the notes or a minimal badge */}
+                {release.body && release.body.trim().length > 0 ? (
+                  <div className="release-notes-fade">
+                    <pre className="release-notes-compact">{release.body}</pre>
+                  </div>
+                ) : (
+                  <div className="release-notes-empty">
+                    <span className="empty-badge">Minor Update</span>
+                  </div>
+                )}
+                
+              </div>
+            )) : (
+              <div className="solid-panel" style={{ padding: '1.5rem', textAlign: 'center', color: '#94a3b8' }}>
+                Loading updates from GitHub...
+              </div>
+            )}
           </div>
         </section>
 
       </main>
 
-      {/* PROPER MULTI-COLUMN FOOTER */}
+      {/* FOOTER */}
       <footer className="footer solid-panel">
         <div className="footer-grid">
-          
-          {/* Brand Column */}
           <div className="footer-brand">
             <div className="footer-logo-row">
               <img src={logo} alt="OH Assistant Logo" className="footer-logo" />
               <span className="footer-title">OH Assistant</span>
             </div>
-            <p className="footer-desc">
-              Your lightweight, frameless companion app for Once Human. Built to keep you informed without interrupting your game.
-            </p>
+            <p className="footer-desc">Your lightweight, frameless companion app for Once Human.</p>
           </div>
-
-          {/* Links Column 1 */}
           <div className="footer-links">
             <h4>Community</h4>
             <a href="https://github.com/PixelsofArya/OH-Assistant-App" target="_blank" rel="noopener noreferrer">GitHub Repo</a>
             <a href="https://www.youtube.com/@CallMeArt91" target="_blank" rel="noopener noreferrer">YouTube</a>
             <a href="https://www.twitch.tv/callmeart91" target="_blank" rel="noopener noreferrer">Twitch</a>
           </div>
-
-          {/* Links Column 2 */}
           <div className="footer-links">
             <h4>Support & Dev</h4>
-            
             <a href="https://guns.lol/aryadeepbarai">Bio</a>
-            
-            {/* Directly opens the Bug Report template */}
-            <a 
-              href="https://github.com/PixelsofArya/OH-Assistant-App/issues/new?template=bug_report.md" 
-              target="_blank" 
-              rel="noopener noreferrer"
-            >
-              Report a Bug
-            </a>
-            
-            {/* Directly opens the Feature Request template */}
-            <a 
-              href="https://github.com/PixelsofArya/OH-Assistant-App/issues/new?template=feature_request.md" 
-              target="_blank" 
-              rel="noopener noreferrer"
-            >
-              Request a Feature
-            </a>
+            <a href="https://github.com/PixelsofArya/OH-Assistant-App/issues/new?template=bug_report.md" target="_blank" rel="noopener noreferrer">Report a Bug</a>
+            <a href="https://github.com/PixelsofArya/OH-Assistant-App/issues/new?template=feature_request.md" target="_blank" rel="noopener noreferrer">Request a Feature</a>
           </div>
         </div>
-
-        {/* Footer Bottom Divider */}
         <div className="footer-bottom">
           <p>Built by a player, for players. Made with ❤️ for the Once Human community.</p>
-          <p className="disclaimer">OH Assistant is a fan-made utility and is not affiliated with, endorsed, or sponsored by Starry Studio.</p>
+          <p className="disclaimer">OH Assistant is a fan-made utility and is not affiliated with Starry Studio.</p>
         </div>
       </footer>
 

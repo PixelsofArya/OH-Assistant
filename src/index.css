@@ -327,3 +327,181 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
     margin: 0 auto;
   }
 }
+/* --- YOUTUBE THUMBNAIL SHOWCASE --- */
+.thumbnail-showcase {
+  width: 100%;
+}
+
+.video-thumbnail-link {
+  display: block;
+  position: relative;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  aspect-ratio: 16 / 9;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid #1e2433;
+  border-left: 4px solid #f43f5e;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.video-thumbnail-link:hover {
+  transform: translateY(-4px);
+  border-color: #38bdf8;
+}
+
+.youtube-thumbnail {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.play-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(11, 14, 20, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s ease;
+}
+
+.video-thumbnail-link:hover .play-overlay {
+  background: rgba(11, 14, 20, 0.1);
+}
+
+.play-button {
+  width: 80px;
+  height: 80px;
+  background: rgba(244, 63, 94, 0.9);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  padding-left: 6px;
+  box-shadow: 0 0 20px rgba(244, 63, 94, 0.5);
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.video-thumbnail-link:hover .play-button {
+  transform: scale(1.1);
+  background: #38bdf8;
+  box-shadow: 0 0 30px rgba(56, 189, 248, 0.6);
+}
+
+/* --- ALL GITHUB RELEASES (SCROLLABLE) --- */
+.changelog-section {
+  width: 100%;
+}
+
+.releases-compact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  
+  /* Added Max Height and Scroll so it doesn't take over the whole page */
+  max-height: 600px;
+  overflow-y: auto;
+  padding-right: 0.5rem;
+}
+
+/* Minimal scrollbar for the releases grid container */
+.releases-compact-grid::-webkit-scrollbar {
+  width: 8px;
+}
+.releases-compact-grid::-webkit-scrollbar-thumb {
+  background-color: #1e2433;
+  border-radius: 10px;
+}
+.releases-compact-grid::-webkit-scrollbar-thumb:hover {
+  background-color: #38bdf8;
+}
+
+.release-compact-card {
+  padding: 1.5rem;
+  border-top: 3px solid #38bdf8;
+  transition: transform 0.2s ease;
+}
+
+.release-compact-card:hover {
+  transform: translateY(-3px);
+}
+
+.release-header-compact {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+}
+
+.release-header-compact h3 {
+  color: #ffffff;
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+}
+
+.release-date {
+  color: #64748b;
+  font-size: 0.85rem;
+}
+
+.release-link-icon {
+  color: #38bdf8;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.2rem;
+  padding: 0.2rem;
+  transition: color 0.2s ease;
+}
+
+.release-link-icon:hover {
+  color: #ffffff;
+}
+
+.release-notes-fade {
+  position: relative;
+  max-height: 120px;
+  overflow: hidden;
+}
+
+.release-notes-fade::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 40px;
+  background: linear-gradient(transparent, #12161f);
+}
+
+.release-notes-compact {
+  color: #94a3b8;
+  font-family: inherit;
+  white-space: pre-wrap;
+  line-height: 1.5;
+  font-size: 0.85rem;
+}
+/* --- MINIMAL EMPTY RELEASE BADGE --- */
+.release-notes-empty {
+  margin-top: 0.5rem;
+}
+
+.empty-badge {
+  background-color: rgba(30, 36, 51, 0.6);
+  color: #64748b;
+  font-size: 0.75rem;
+  padding: 0.25rem 0.75rem;
+  border-radius: 4px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border: 1px solid #1e2433;
+}
